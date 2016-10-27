@@ -42,3 +42,9 @@ en:
   signup_title: "Sign up"
   signup_page: "Sign up"
   create_account: "Create my account"
+  profile_update: "Profile updated"
+
+  users:
+    edit:
+      edit: "Edit User"
+      save_change: "Save changes"
