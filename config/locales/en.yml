@@ -43,8 +43,18 @@ en:
   signup_page: "Sign up"
   create_account: "Create my account"
   profile_update: "Profile updated"
+  learned: "Learned: 54 words"
+  right: "Right: 27 words"
+  wrong: "Wrong: 27 words"
+  words: "Words"
+  lesson: "Lessons"
+  recent_activities: "Recent Activities"
+  manage_users: "Manage Users"
+  manage_categories: "Manage Categories"
+  manage_words: "Manage Words"
 
   users:
     edit:
       edit: "Edit User"
       save_change: "Save changes"
+

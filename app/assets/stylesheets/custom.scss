@@ -1,12 +1,24 @@
-@import "bootstrap-sprockets";
-@import "bootstrap";
+@import 'bootstrap-sprockets';
+@import 'bootstrap';
 
 $gray-medium-light: #eaeaea;
+
+* {
+  margin: 0;
+  padding: 0;
+}
 
 @mixin box_sizing {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+  li {
+    line-height: 30px;
+  }
 }
 
 body {
@@ -92,9 +104,7 @@ footer {
   }
 }
 
-/*******************************************/
 /***************** SIDEBAR *****************/
-/*******************************************/
 aside {
   section.user_info {
     margin-top: 20px;
@@ -130,10 +140,7 @@ aside {
   margin-top: 15px;
 }
 
-
-/*******************************************/
 /****************** FORMS ******************/
-/*******************************************/
 input, textarea, select, .uneditable-input {
   border: 1px solid #bbb;
   width: 100%;
@@ -157,5 +164,78 @@ input {
   @extend .has-error;
   .form-control {
     color: $state-danger-text;
+  }
+}
+
+/************* USER'S HOMEPAGE *************/
+.homepage {
+  .user_info h2 {
+    font-weight: bold;
+    font-size: 25px;
+    text-align: left;
+    line-height: 25px;
+    margin: 18px;
+  }
+
+  .learn_info_abstract {
+    padding-top: 15px;
+  }
+
+  .navbar, .admin_navbar {
+    li {
+      float: left;
+      margin: 30px 20px;
+    }
+    a {
+      padding: 15px 20px;
+      border-radius: 5px;
+      background: lightpink;
+      font: 20px bold Arial, sans-serif;
+      &:hover {
+        background: lightgreen;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .recent_activities {
+    border-top: 1px solid black;
+    h2 {
+      font: 28px Arial, sans-serif;
+      font-weight: bold;
+      text-align: left;
+    }
+    .gravatar {
+      float: left;
+      margin-right: 10px;
+      margin-top: 5px;
+    }
+    li {
+      height: 90px;
+      line-height: 90px;
+    }
+  }
+}
+
+/************** USER'S PROFILE *************/
+.row {
+  .recent_activities {
+    li {
+      height: 90px;
+      line-height: 90px;
+    }
+    h2 {
+      font: 28px Arial, sans-serif;
+      font-weight: bold;
+      text-align: left;
+    }
+  }
+
+  .user_info h2 {
+    font-weight: bold;
+    font-size: 25px;
+    text-align: left;
+    line-height: 25px;
+    margin: 18px;
   }
 }
