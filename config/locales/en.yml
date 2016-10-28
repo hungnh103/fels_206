@@ -52,9 +52,21 @@ en:
   manage_users: "Manage Users"
   manage_categories: "Manage Categories"
   manage_words: "Manage Words"
+  view_profile: "View my profile"
+  category: "Manage Categories"
+  index: "No."
 
   users:
     edit:
       edit: "Edit User"
       save_change: "Save changes"
+
+  admin:
+    categories:
+      index:
+        category_name: "Category"
+        description: "Description"
+        created: "Created at"
+        edit: "Edit"
+        delete: "Delete"
 

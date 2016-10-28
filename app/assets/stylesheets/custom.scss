@@ -2,6 +2,7 @@
 @import 'bootstrap';
 
 $gray-medium-light: #eaeaea;
+$title: lightblue;
 
 * {
   margin: 0;
@@ -169,12 +170,17 @@ input {
 
 /************* USER'S HOMEPAGE *************/
 .homepage {
-  .user_info h2 {
-    font-weight: bold;
-    font-size: 25px;
-    text-align: left;
-    line-height: 25px;
-    margin: 18px;
+  .user_info {
+    h2 {
+      font-weight: bold;
+      font-size: 25px;
+      text-align: left;
+      line-height: 25px;
+      margin: 18px;
+    }
+    a:hover {
+      text-decoration: none;
+    }
   }
 
   .learn_info_abstract {
@@ -237,5 +243,36 @@ input {
     text-align: left;
     line-height: 25px;
     margin: 18px;
+  }
+}
+
+
+/************ MANAGE CATEGORIES ***********/
+.cate-index, .cate-edit, .cate-del {
+  width: 20px;
+}
+
+.cate-created {
+  width: 180px;
+}
+
+.cate-name {
+  width: 250px;
+}
+
+table {
+  tr {
+    height: 50px;
+    &:hover {
+      background: $gray-medium-light;
+    }
+  }
+}
+
+.table-title {
+  background: $title;
+  height: 30px;
+  &:first-child {
+    background: $title;
   }
 }

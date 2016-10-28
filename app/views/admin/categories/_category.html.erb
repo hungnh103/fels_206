@@ -1,0 +1,21 @@
+<% @categories.each_with_index do |cate, index| %>
+  <tr>
+    <td>
+      <% params[:page] ||= "1" %>
+      <%= get_index params[:page], index, Settings.category.per_page %>
+    </td>
+    <td><%= cate.name %></td>
+    <td><%= cate.description %></td>
+    <td><%= l cate.created_at, format: :long %></td>
+    <td>
+      <a href="#" class="underline">
+        <span class="glyphicon glyphicon-edit"></span>
+      </a>
+    </td>
+    <td>
+      <a href="#" class="underline text-danger">
+        <span class="glyphicon glyphicon-trash"></span>
+      </a>
+    </td>
+  </tr>
+<% end %>

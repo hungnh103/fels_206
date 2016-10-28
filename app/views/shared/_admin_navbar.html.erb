@@ -1,5 +1,5 @@
 <ul>
-  <li><a href="#"><%= t "manage_users" %></a></li>
-  <li><a href="#"><%= t "manage_categories" %></a></li>
-  <li><a href="#"><%= t "manage_words" %></a></li>
+  <li><%= link_to t("manage_users") %></li>
+  <li><%= link_to t("manage_categories"), admin_categories_path %></li>
+  <li><%= link_to t("manage_words") %></li>
 </ul>
