@@ -55,6 +55,11 @@ en:
   view_profile: "View my profile"
   category: "Manage Categories"
   index: "No."
+  add_category: "Add Category"
+  add_category_success: "Category has been added!"
+  add_category_fail: "Add category failed!"
+  access_denied: "You can't access that page"
+  not_login: "You haven't logined!"
 
   users:
     edit:
