@@ -67,6 +67,10 @@ en:
   update_category_fail: "Category hasn't been updated"
   category_not_found: "Category hasn't been existed"
   reject_delete_category: "Category has any words. Cannot delete it"
+  user: "Manage Users"
+  add_user: "Add User"
+  member: "Member"
+  admin_in_user_table: "Admin"
 
   users:
     edit:
