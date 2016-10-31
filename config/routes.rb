@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-  get "session/new"
-
   root "static_pages#home"
   get "users/new"
   get "/help", to: "static_pages#help"
@@ -14,5 +12,6 @@ Rails.application.routes.draw do
   resources :users
   namespace :admin do
     resources :categories
+    resources :users
   end
 end

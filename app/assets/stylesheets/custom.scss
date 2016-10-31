@@ -280,3 +280,26 @@ table {
 .require {
   color: red;
 }
+
+/************ MANAGE USERS ***********/
+.list-user {
+  width: 700px;
+  margin: auto;
+}
+
+.user-index, .user-del {
+  width: 20px;
+}
+
+.user-name {
+  width: 150px;
+}
+
+.user-level {
+  width: 90px;
+}
+
+.is-admin {
+  color: red;
+  font-weight: bold;
+}

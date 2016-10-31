@@ -1,0 +1,14 @@
+<% provide :title, (t "user") %>
+<div class="col-md-12">
+  <table class="table text-center list-user">
+    <tr class="table-title">
+      <th class="text-center user-index"><%= t "index" %></th>
+      <th class="text-center user-name"><%= t ".user_name" %></th>
+      <th class="text-center user-email"><%= t ".email" %></th>
+      <th class="text-center user-level"><%= t ".level" %></th>
+      <th class="text-center user-del"><%= t ".delete" %></th>
+    </tr>
+    <%= render "user" %>
+  </table>
+  <%= will_paginate %>
+</div>

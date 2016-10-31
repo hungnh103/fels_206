@@ -1,0 +1,21 @@
+<% @users.each_with_index do |user, index| %>
+  <tr>
+    <td>
+      <% params[:page] ||= "1" %>
+      <%= get_index params[:page], index, Settings.user.per_page %>
+    </td>
+    <td><%= user.name %></td>
+    <td><%= user.email %></td>
+    <% if user.is_admin %>
+      <td class="is-admin"><%= t "admin_in_user_table" %></td>
+      <td>&nbsp;</td>
+    <% else %>
+      <td><%= t "member" %></td>
+      <td>
+        <%= link_to "#", class: "underline text-danger" do %>
+          <span class="glyphicon glyphicon-trash"></span>
+        <% end %>
+      </td>
+    <% end %>
+  </tr>
+<% end %>
