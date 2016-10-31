@@ -60,6 +60,9 @@ en:
   add_category_fail: "Add category failed!"
   access_denied: "You can't access that page"
   not_login: "You haven't logined!"
+  confirm_delete: "Are you serious?"
+  delete_category_success: "Category has been removed"
+  category_not_found: "Category hasn't been existed"
 
   users:
     edit:

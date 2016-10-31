@@ -13,9 +13,11 @@
       </a>
     </td>
     <td>
-      <a href="#" class="underline text-danger">
+      <%= link_to [:admin, cate], method: :delete,
+        class: "underline text-danger",
+        data: {confirm: (t "confirm_delete")} do %>
         <span class="glyphicon glyphicon-trash"></span>
-      </a>
+      <% end %>
     </td>
   </tr>
 <% end %>
