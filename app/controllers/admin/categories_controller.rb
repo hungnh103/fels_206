@@ -1,7 +1,7 @@
 class Admin::CategoriesController < ApplicationController
   before_action :check_logged
   before_action :check_admin
-  before_action :load_category, only: :destroy
+  before_action :load_category, only: [:edit, :update, :destroy]
 
   def index
     @categories = Category.order(created_at: :DESC)
@@ -10,6 +10,9 @@ class Admin::CategoriesController < ApplicationController
 
   def new
     @category = Category.new
+  end
+
+  def edit
   end
 
   def create
@@ -23,9 +26,23 @@ class Admin::CategoriesController < ApplicationController
     end
   end
 
+  def update
+    if @category.update_attributes category_params
+      flash[:success] = t "update_category_success"
+      redirect_to admin_categories_path
+    else
+      flash[:success] = t "update_category_fail"
+      render :edit
+    end
+  end
+
   def destroy
     if @category.destroy
-      flash[:success] = t "delete_category_success"
+      if @category.words.any?
+        flash[:danger] = t "reject_delete_category"
+      else
+        flash[:success] = t "delete_category_success"
+      end
     end
     redirect_to admin_categories_path
   end
