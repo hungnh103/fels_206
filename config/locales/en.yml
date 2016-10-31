@@ -92,3 +92,7 @@ en:
   sessions:
     new:
       remember: "Remember me on this computer"
+  categories:
+    category:
+      progress: "Da hoc 20/100 tu"
+      start: "Start"
