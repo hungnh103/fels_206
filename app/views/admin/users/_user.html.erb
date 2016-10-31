@@ -12,7 +12,9 @@
     <% else %>
       <td><%= t "member" %></td>
       <td>
-        <%= link_to "#", class: "underline text-danger" do %>
+        <%= link_to [:admin, user], method: :delete,
+          class: "underline text-danger",
+          data: {confirm: (t "confirm_delete")} do %>
           <span class="glyphicon glyphicon-trash"></span>
         <% end %>
       </td>
