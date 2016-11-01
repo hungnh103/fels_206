@@ -1,0 +1,12 @@
+<% @categories.each_with_index do |cate, index| %>
+  <tr>
+    <td>
+      <% params[:page] ||= "1" %>
+      <%= get_index params[:page], index, Settings.category.per_page %>
+    </td>
+    <td><%= cate.name %></td>
+    <td><%= cate.description %></td>
+    <td><%= t ".progress" %></td>
+    <td><%= link_to t(".start"), "#", class: "btn btn-success" %></td>
+  </tr>
+<% end %>
