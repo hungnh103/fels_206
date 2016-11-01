@@ -82,6 +82,7 @@ p {
 }
 
 footer {
+  clear: both;
   margin-top: 45px;
   padding-top: 5px;
   color: $gray-light;
@@ -326,4 +327,14 @@ table {
 
 .cate-created {
   width: 130px;
+}
+
+/************ SHOW LIST USERS ***********/
+.list-users {
+  height: 60px;
+  line-height: 60px;
+}
+
+#user-list-users {
+  margin-left: 350px;
 }

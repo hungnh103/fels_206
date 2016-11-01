@@ -1,0 +1,11 @@
+<% provide :title, t(".all_user") %>
+<h1><%= t ".all_user" %></h1>
+<div class="col-md-12" id="user-list-users">
+  <% @users.each do |user| %>
+    <p class="list-users">
+      <%= gravatar_for user, size: Settings.user.avatar_size %>
+      <%= link_to user.name, user %>
+    </p>
+  <% end %>
+<%= will_paginate %>
+</div>

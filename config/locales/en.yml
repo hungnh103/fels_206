@@ -79,6 +79,8 @@ en:
     edit:
       edit: "Edit User"
       save_change: "Save changes"
+    index:
+      all_user: "List Users"
 
   admin:
     categories:
