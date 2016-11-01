@@ -89,3 +89,6 @@ en:
         edit: "Edit"
         delete: "Delete"
 
+  sessions:
+    new:
+      remember: "Remember me on this computer"
