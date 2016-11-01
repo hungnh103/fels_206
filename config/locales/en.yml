@@ -71,6 +71,9 @@ en:
   add_user: "Add User"
   member: "Member"
   admin_in_user_table: "Admin"
+  user_not_found: "User hasn't been existed"
+  delete_user_success: "User has been removed"
+  delete_user_fail: "Cannot delete this user"
 
   users:
     edit:
