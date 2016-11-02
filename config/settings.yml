@@ -3,3 +3,4 @@ category:
   per_page: 7
 user:
   per_page: 7
+  avatar_size: 50
