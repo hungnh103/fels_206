@@ -1,0 +1,39 @@
+<table class="table table-hover manage-word">
+  <tr class="title-manage-word">
+    <th class="index"><%= t ".index" %></th>
+    <th class="cate"><%= t ".category" %></th>
+    <th class="word"><%= t ".word" %></th>
+    <th class="answer"><%= t ".answer" %></th>
+    <th class="edit"><%= t ".edit" %></th>
+    <th class="del"><%= t ".delete" %></th>
+  </tr>
+  <% @words.each_with_index do |word, index| %>
+    <tr>
+      <td>
+        <% params[:page] ||= "1" %>
+        <%= get_index params[:page], index, Settings.category.per_word %>
+      </td>
+      <td><%= word.category.name %></td>
+      <td><%= word.content %></td>
+      <td>
+        <% word.answers.each do |answer| %>
+          <%= answer.content if answer.is_correct %>
+        <% end %>
+      </td>
+      <td>
+        <a href="javascript:void(0)">
+          <span class="btn btn glyphicon glyphicon-edit"></span>
+        </a>
+      </td>
+      <td>
+        <a href="javascript:void(0)">
+          <span class="btn btn glyphicon glyphicon-trash text-danger"></span>
+        </a>
+      </td>
+    </tr>
+  <% end %>
+</table>
+<div class="manage-word-paginate">
+  <%= will_paginate %>
+</div>
+
