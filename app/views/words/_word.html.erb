@@ -1,0 +1,10 @@
+<% @words.each_with_index do |word, index|  %>
+  <tr>
+    <td>
+      <% params[:page] ||= "1" %>
+      <%= get_index params[:page], index, Settings.word.per_page %>
+    </td>
+    <td><%= word.w_content %></td>
+    <td><%= word.a_content %></td>
+  </tr>
+<% end %>

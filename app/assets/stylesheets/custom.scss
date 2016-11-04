@@ -387,3 +387,47 @@ table {
   margin: auto;
   width: 800px;
 }
+
+/************ SHOW WORD LIST USER ***********/
+
+.table-word-answer {
+  text-align: center;
+  width: 700px;
+  margin: 10px auto;
+  .table-word-answer-title {
+    background: $title;
+    height: 30px;
+    &:first-child {
+      background: $title;
+    }
+    .word-answer-index{
+      width: 90px;
+      text-align: center;
+    }
+    .word-answer-word {
+      text-align: center;
+    }
+    .word-answer-answer {
+      width: 300px;
+      text-align: center;
+    }
+  }
+}
+
+.categories-search{
+  height: 34px;
+  width: 240px;
+}
+
+#label-cate{
+  font-size: 30px;
+}
+
+.user-filter-word {
+  .title {
+    margin-right: 20px;
+  }
+  input {
+    width: auto;
+  }
+}
