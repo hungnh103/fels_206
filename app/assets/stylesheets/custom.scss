@@ -338,3 +338,52 @@ table {
 #user-list-users {
   margin-left: 350px;
 }
+
+/************ MANAGE WORDS ***********/
+.clr {
+  clear: both;
+}
+
+.box-search {
+  .choose-cate {
+    margin-left: 300px;
+    .categories-search {
+      float: left;
+      width: 150px;
+      margin-right: 20px;
+      height: 35px;
+    }
+    .btn-filter {
+      float: left;
+      width: 70px;
+    }
+  }
+  .btn-new-word {
+    margin: 10px 0 10px 170px;
+  }
+}
+
+.manage-word {
+  width: 800px;
+  margin: auto;
+}
+
+.title-manage-word {
+  height: 20px;
+  background: $title;
+  width: 700px;
+  .index, .edit, .del {
+    width: 50px;
+  }
+  .cate {
+    width: 200px;
+  }
+  .word {
+    width: 200px;
+  }
+}
+
+.manage-word-paginate {
+  margin: auto;
+  width: 800px;
+}

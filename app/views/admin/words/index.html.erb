@@ -1,0 +1,19 @@
+<% provide :title, t(".word") %>
+<div>
+  <div class="box-search">
+    <%= form_tag "javascript:void(0)", id: "search-form" do %>
+      <div class="choose-cate">
+        <%= select_tag(:category_id, options_for_select(@categories
+          .collect{|category| [category.name, category.id]},
+          params[:category_id]), include_blank: Settings.all,
+          class: "categories-search") %>
+        <%= submit_tag t(".filter"),
+          class: "btn btn-primary btn-search btn-filter" %>
+      </div>
+      <div class="clr"></div>
+      <%= link_to t(".add_word"), "javascript:void(0)",
+        class: "btn btn-success btn-new-word" %>
+    <% end %>
+  </div>
+  <%= render "word" %>
+</div>

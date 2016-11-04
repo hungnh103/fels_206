@@ -90,6 +90,23 @@ en:
         created: "Created at"
         edit: "Edit"
         delete: "Delete"
+    words:
+      index:
+        word: "Manage Words"
+        add_word: "Add Word"
+        category: "Category"
+        word_content: "Word Content"
+        word_detail: "Word Detail"
+        edit: "Edit"
+        delete: "Delete"
+        filter: "Filter"
+      word:
+        index: "No."
+        category: "Category"
+        word: "Word"
+        answer: "Answer"
+        edit: "Edit"
+        delete: "Delete"
 
   sessions:
     new:
