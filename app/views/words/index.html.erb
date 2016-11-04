@@ -1,0 +1,42 @@
+<% provide :title, t(".wordlist") %>
+<%= form_tag "javascript:void(0)", id: "search-form" do %>
+  <div class="user-box-search">
+    <div class="select-category">
+      <label id="label-cate"><%= t ".category" %></label>
+      <%= select_tag(:category_id, options_for_select(@categories
+        .collect{|category| [category.name, category.id]},
+        params[:category_id]), include_blank: Settings.all,
+        class: "categories-search") %>
+    </div>
+   <div class="user-filter-word">
+    <label class="title"><%= t ".status" %></label>
+    <label class="radio-inline">
+      <input type="radio" id="category-all" name="post[category]"
+        value="all" checked="checked" />
+      <%= t ".all" %>
+    </label>
+    <label class="radio-inline">
+      <input type="radio" id="category-learned" name="post[category]"
+      value="category-learned" />
+      <%= t ".learned" %>
+    </label>
+    <label class="radio-inline">
+      <input type="radio" id="category-notlearned" name="post[category]"
+      value="notlearned" />
+      <%= t ".notlearned" %>
+    </label>
+   </div>
+  </div>
+  <button type="button" class="btn btn-primary btn-md">
+    <%= t ".filter" %>
+  </button>
+  <table class="table-word-answer">
+    <tr class="table-word-answer-title">
+      <th class="word-answer-index"><%= t ".index" %></th>
+      <th class="word-answer-word"><%= t ".word" %></th>
+      <th class="word-answer-answer"><%= t ".answer" %></th>
+    </tr>
+    <%= render "word" %>
+  </table>
+  <%= will_paginate %>
+<% end %>

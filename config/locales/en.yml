@@ -111,7 +111,23 @@ en:
   sessions:
     new:
       remember: "Remember me on this computer"
+
   categories:
     category:
       progress: "Da hoc 20/100 tu"
       start: "Start"
+
+  words:
+    index:
+      wordlist: "Word List"
+      category: "Category: "
+      filter: "Search"
+      all: "All"
+      learned: "Learned"
+      notlearned: "Not learned"
+      status: "Status: "
+      index: "No."
+
+  shared:
+    navbar:
+      words: "Words"
