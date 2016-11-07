@@ -26,9 +26,10 @@
         </a>
       </td>
       <td>
-        <a href="javascript:void(0)">
-          <span class="btn btn glyphicon glyphicon-trash text-danger"></span>
-        </a>
+        <%= link_to "", [:admin, word],
+            method: :delete, data: {confirm: t(".sure"),
+            remote: true},
+            class: "btn btn glyphicon glyphicon-trash text-danger" %>
       </td>
     </tr>
   <% end %>
