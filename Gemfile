@@ -13,6 +13,7 @@ gem "jbuilder", "2.4.1"
 gem "config"
 gem "will_paginate", "3.1.0"
 gem "bootstrap-will_paginate", "0.0.10"
+gem "i18n-js", ">=3.0.0.rc10"
 
 group :development, :test do
   gem "sqlite3", "1.3.11"
