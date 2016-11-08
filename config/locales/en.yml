@@ -113,6 +113,15 @@ en:
         delete_word_success: "Delete word success"
         delete_word_fail: "Delete word fail"
         word_not_found: "Word not found"
+      new:
+        add_word: "Add word"
+      create:
+        create_word_success: "Create word success"
+      form_word:
+        category: "Category"
+        question: "Question"
+        answers: "Answers"
+        add_answer: "Add answer"
 
   sessions:
     new:
@@ -137,3 +146,5 @@ en:
   shared:
     navbar:
       words: "Words"
+  min_number_answers: "Number of answers isn't smaller than 2"
+  max_number_answers: "Number of answers isn't larger than 6"
