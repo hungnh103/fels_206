@@ -2,16 +2,15 @@
   <div class="attachment fields">
     <div class="row">
       <div class="col-md-7">
-        <%= f.text_field :content , class: "form-control"%>
+        <%= f.text_field :content, class: "form-control" %>
       </div>
       <div class="col-md-1 cb-answer">
-        <%= f.check_box :is_correct , id: "answer", class: "BOOLEAN"%>
+        <%= f.check_box :is_correct, id: "answer", class: "BOOLEAN" %>
       </div>
       <div>
         <%= link_to_remove_fields raw("<span class='glyphicon glyphicon-trash
-          text-danger'></span>"), f%>
+          text-danger'></span>"), f %>
       </div>
     </div>
-    <br />
   </div>
 </fieldset>

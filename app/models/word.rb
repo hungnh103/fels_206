@@ -4,6 +4,7 @@ class Word < ApplicationRecord
   belongs_to :category
 
   validates :content, presence: true
+  validate :validate_answer
 
   accepts_nested_attributes_for :answers, allow_destroy: true,
     reject_if: proc{|attributes| attributes["content"].blank?}
@@ -28,6 +29,13 @@ class Word < ApplicationRecord
   def build_word_answers
     if self.new_record? && self.answers.size == 0
       Settings.admin.words.default_size_word_answers.times {self.answers.build}
+    end
+  end
+
+  def validate_answer
+    size_correct = self.answers.select{|answer| answer.is_correct}.size
+    if size_correct != 1
+      errors.add "Warning: ", I18n.t(".number_correct_answer")
     end
   end
 end

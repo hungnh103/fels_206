@@ -1,6 +1,6 @@
 class Admin::WordsController < ApplicationController
   before_action :check_logged, :check_admin
-  before_action :load_word, only: [:destroy]
+  before_action :load_word, only: [:destroy, :edit, :update]
   before_action :load_categories, except: [:destroy]
 
   def index
@@ -16,13 +16,26 @@ class Admin::WordsController < ApplicationController
     @word = Word.new
   end
 
+  def edit
+    params[:category_id] = @word.category_id if @word.present?
+  end
+
   def create
     @word = Word.new word_params
     if @word.save
       flash[:success] = t ".create_word_success"
-      redirect_to admin_words_url
+      redirect_to admin_words_path
     else
       render :new
+    end
+  end
+
+  def update
+    if @word.update_attributes word_params
+      redirect_to admin_words_path
+      flash[:success] = t ".word_update_success"
+    else
+      render :edit
     end
   end
 

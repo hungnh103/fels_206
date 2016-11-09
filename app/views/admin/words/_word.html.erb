@@ -21,15 +21,13 @@
         <% end %>
       </td>
       <td>
-        <a href="javascript:void(0)">
-          <span class="btn btn glyphicon glyphicon-edit"></span>
-        </a>
+        <%= link_to "", edit_admin_word_path(word),
+          class: "btn btn glyphicon glyphicon-edit" %>
       </td>
       <td>
         <%= link_to "", [:admin, word],
-            method: :delete, data: {confirm: t(".sure"),
-            remote: true},
-            class: "btn btn glyphicon glyphicon-trash text-danger" %>
+          method: :delete, data: {confirm: t(".sure"), remote: true},
+          class: "btn btn glyphicon glyphicon-trash text-danger" %>
       </td>
     </tr>
   <% end %>
