@@ -417,7 +417,7 @@ table {
 
 .categories-search{
   height: 34px;
-  width: 240px;
+  width: 250px;
 }
 
 #label-cate{
@@ -431,4 +431,9 @@ table {
   input {
     width: auto;
   }
+}
+
+#btn-search{
+  width: 80px;
+  margin-left: 10px;
 }

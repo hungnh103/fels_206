@@ -142,11 +142,13 @@ en:
       wordlist: "Word List"
       category: "Category: "
       filter: "Search"
-      all: "All"
+      show_all: "All"
       learned: "Learned"
-      notlearned: "Not learned"
+      not_learned: "Not learned"
       status: "Status: "
       index: "No."
+      select: "-------------------"
+      search_by_word: "Enter a word"
 
   shared:
     navbar:
