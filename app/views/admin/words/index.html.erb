@@ -1,7 +1,7 @@
 <% provide :title, t(".word") %>
 <div>
   <div class="box-search">
-    <%= form_tag "javascript:void(0)", id: "search-form" do %>
+    <%= form_tag admin_words_path, method: :get, id: "search-form" do %>
       <div class="choose-cate">
         <%= select_tag(:category_id, options_for_select(@categories
           .collect{|category| [category.name, category.id]},

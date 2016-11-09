@@ -8,7 +8,6 @@ class Admin::WordsController < ApplicationController
     params[:word_filter] ||= Settings.word_filter[:all]
     @words = Word.order(created_at: :DESC)
       .includes(:answers).in_category(params[:category_id])
-      .send(params[:word_filter], current_user.id, params[:search])
       .paginate page: params[:page], per_page: Settings.category.per_word
   end
 

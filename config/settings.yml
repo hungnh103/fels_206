@@ -13,3 +13,4 @@ word_filter: {learned: "learned", not_learned: "not_learned", all: "show_all"}
 filter_word: [".learned", ".not_learned"]
 word:
   per_page: 10
+all: All
